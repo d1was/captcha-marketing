@@ -1,0 +1,25 @@
+.serviceCard {
+    padding: 20px;
+    height: 100%;
+    &.serviceCard--content {
+        background-color: $white;
+        padding: 3rem 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &.serviceCard--image {
+        background-color: $red-100;
+    }
+
+    &__title {
+        color: $gray-500;
+        font-weight: bold;
+    }
+    &__paragraph {
+        text-align: center;
+        color: $gray-600;
+    }
+
+}

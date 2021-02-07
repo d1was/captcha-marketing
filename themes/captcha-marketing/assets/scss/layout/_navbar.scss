@@ -1,0 +1,13 @@
+.navbar {
+    .navbar-nav {
+        .nav-item {
+            font-family: $headings-font-family;
+            a {
+                padding: 20px;
+                &.active{
+                    color: $black;
+                }
+            }
+        }
+    }
+}

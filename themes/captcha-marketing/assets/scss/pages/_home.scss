@@ -1,0 +1,117 @@
+.hero-section {
+    height: 36rem;
+    background-image: image('1.jpeg');
+    background-size: cover;
+    background-position: 50% 70%;
+
+    .container {
+        height: 100%;
+
+        .row {
+            height: 100%;
+        }
+
+        .text-content {
+            color: $brand-color;
+            font-family: $headings-font-family;
+
+            .soft-text {
+
+            }
+            .hard-text {
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+
+.about-section {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    .contentBox {
+        .about__heading {
+            text-align: center;
+            color: $brand-color;
+            font-family: $headings-font-family;
+            padding-bottom: 1rem;
+
+        }
+        .about__content {
+            color: $gray-600;
+            text-align: center;
+        }
+    }
+}
+
+
+.service-section {
+    background-color: $gray-200;
+    padding: 2rem 0;
+
+    &__title {
+        text-align: center;
+    }
+}
+
+
+.testimonial-section {
+    .testimonial__heading {
+        text-align: center;
+        padding-top: 3rem;
+        font-size: 3rem;
+        color: rgba($brand-color, 0.8);
+        font-weight: lighter;
+
+    }
+    .testimonial__card {
+        padding: 2rem;
+        background-color: $gray-300;
+        color: $brand-color;
+
+        &--title {
+        }
+
+        &__paragraph {
+            padding-top: 1rem;
+        }
+
+        &__credits {
+            &--name {
+
+            }
+            &--position {
+                font-weight: bold;
+            }
+        }
+
+        &.testimonial__card--odd {
+            .testimonial__card__title {
+                color: $gray-600;
+            }
+            color: $gray-600;
+            background-color: $red-100;
+        }
+    }
+}
+
+
+.consultation-form {
+    background-color: $gray-200;
+    padding-bottom: 2rem;
+    .consultation__heading {
+        text-align: center;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        font-size: 3rem;
+        color: rgba($brand-color, 0.8);
+        font-weight: lighter;
+    }
+
+    input, textarea {
+        &::placeholder {
+          color: $brand-color;
+        }
+    }
+}
