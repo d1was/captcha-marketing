@@ -1,0 +1,4 @@
+title: Blog Posts
+list: ~/plugins/CaptchaMarketing/Service/models/Service/columns.yaml
+modelClass: CaptchaMarketing\Service\Models\Service
+recordUrl: captchamarketing/service/services/update/:id

@@ -3,6 +3,20 @@
     background-image: image('1.jpeg');
     background-size: cover;
     background-position: 50% 70%;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: linear-gradient(0deg, #00000088 30%, #ffffff34 100%);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        left: 0;
+        top: 0;
+
+    }
 
     .container {
         height: 100%;
@@ -13,14 +27,15 @@
 
         .text-content {
             color: $brand-color;
-            font-family: $headings-font-family;
 
             .soft-text {
 
             }
             .hard-text {
                 font-weight: bold;
+                font-size: 3rem;
                 letter-spacing: 1px;
+                color: $brand-color;
             }
         }
     }
@@ -33,25 +48,68 @@
     .contentBox {
         .about__heading {
             text-align: center;
-            color: $brand-color;
-            font-family: $headings-font-family;
+            color: #e57a38;
             padding-bottom: 1rem;
+            font-size: 2.4rem;
 
         }
         .about__content {
-            color: $gray-600;
+            color: $gray-500;
             text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.4;
         }
     }
 }
 
 
+.service2-section {
+
+    .section-subtitle {
+        color: $brand-color;
+        font-weight: bold;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        padding-bottom: 2.6rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+
+    }
+
+    .service-list > * {
+        padding-bottom: 2rem;
+    }
+
+    .service-icon {
+        svg {
+            fill: $brand-color;
+            width: 2rem;
+        }
+    }
+
+    .service-title {
+        color: $gray-700;
+        font-weight: bold;
+    }
+    .service-content {
+        color: $gray-600;
+        font-size: 0.8rem;
+        line-height: 1.8;
+    }
+}
+
 .service-section {
-    background-color: $gray-200;
-    padding: 2rem 0;
+    background-color: #f2f2f2;
+    padding-top: 2rem;
 
     &__title {
+        color: #e57a38;
+        font-size: 2.7rem;
+        font-weight: 300;
         text-align: center;
+
     }
 }
 
@@ -59,22 +117,27 @@
 .testimonial-section {
     .testimonial__heading {
         text-align: center;
-        padding-top: 3rem;
-        font-size: 3rem;
-        color: rgba($brand-color, 0.8);
+        font-size: 2.8rem;
         font-weight: lighter;
+        letter-spacing: 1px;
+        & strong {
+            font-weight: bold;
+        }
 
     }
     .testimonial__card {
         padding: 2rem;
-        background-color: $gray-300;
+        background-color: #f2f2f2;
         color: $brand-color;
 
-        &--title {
+        &__title {
+            font-size: 1.1rem;
+            font-weight: 700;
         }
 
         &__paragraph {
             padding-top: 1rem;
+            font-size: 0.9rem;
         }
 
         &__credits {
@@ -85,33 +148,32 @@
                 font-weight: bold;
             }
         }
-
-        &.testimonial__card--odd {
-            .testimonial__card__title {
-                color: $gray-600;
-            }
+    }
+    .column:nth-of-type(2) .testimonial__card {
+        .testimonial__card__title {
             color: $gray-600;
-            background-color: $red-100;
         }
+        color: $gray-600;
+        background-color: #FFE6D9;
     }
 }
 
 
+
 .consultation-form {
-    background-color: $gray-200;
+    padding-top: 1.7rem;
+    background-color: #F2f2f2;
     padding-bottom: 2rem;
     .consultation__heading {
         text-align: center;
-        padding-top: 3rem;
         padding-bottom: 1rem;
         font-size: 3rem;
-        color: rgba($brand-color, 0.8);
         font-weight: lighter;
     }
 
     input, textarea {
         &::placeholder {
-          color: $brand-color;
+          color: $light-orange;
         }
     }
 }

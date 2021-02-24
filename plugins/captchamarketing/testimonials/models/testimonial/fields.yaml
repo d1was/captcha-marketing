@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Peron's name
+        type: text
+    company:
+        label: Company Name s/he's associated with
+        type: text
+    position:
+        label: Position in the company
+    mainText:
+        label: Main text
+    paragraph:
+        label: Paragraph
+        type: textarea
+    order:
+        label: Order
+        type: number
+        default: 0

@@ -1,0 +1,39 @@
+url = "/service/:slug"
+layout="app"
+==
+use Captchamarketing\Service\Models\Service;
+
+function onStart() {
+    $serviceSlug = $this->param('slug');
+    $this['service'] = Service::whereSlug($serviceSlug)->first();
+    if(!$this['service']) {
+        return Redirect::to('/404');
+    }
+}
+
+==
+{% put head %}
+<title>{{ service.title }} | CaptchaMarketing</title>
+{% endput %}
+
+<section class="hero-section hero-section--service" style="background-image: url({{ service.featured_image[0].path }})">
+    <div class="container">
+        <div class="row justify-content-center align-items-end ">
+            <div class="col-md-12">
+                <div class="text-content d-flex flex-column align-items-center">
+                    <h1 class="hard-text">{{ service.title }}</h1>
+                    <button class="btn btn-primary px-5">Request a consultation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-content">
+    <div class="container">
+        <div class="row">
+            {{ service.content | raw }}
+        </div>
+    </div>
+</section>
+

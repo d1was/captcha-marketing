@@ -1,0 +1,22 @@
+<section class="testimonial-section">
+    <div class="container">
+        <h3 class="testimonial__heading ">What our clients say about <b>Captcha</b></h3>
+        <div class="row  justify-content-center py-4 gy-3">
+            {% for testimonial in testimonials %}
+            <div class="col-md-4">
+                <div class="testimonial__card">
+                    <h5 class="testimonial__card__title">Royal Big Master Wine</h5>
+                    <p class="testimonial__card__paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor ea eligendi perspiciatis quos tempore.
+                    </p>
+
+                    <div class="testimonial__card__credits">
+                        <div class="testimonial__card__credits__name">Neha Mishra</div>
+                        <div class="testimonial__card__credits__position"><b>Global Brand Manager</b></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

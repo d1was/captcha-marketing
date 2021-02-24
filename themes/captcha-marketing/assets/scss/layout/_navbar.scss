@@ -2,10 +2,20 @@
     .navbar-nav {
         .nav-item {
             font-family: $headings-font-family;
-            a {
+             > a {
                 padding: 20px;
+                 text-decoration: none;
+                color: $nav-color;
                 &.active{
                     color: $black;
+                }
+            }
+
+            &.dropdown {
+                .dropdown-menu {
+                    .dropdown-item {
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }

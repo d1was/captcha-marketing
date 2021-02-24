@@ -1,0 +1,42 @@
+.service-content {
+    p {
+        color: $gray-500;
+        line-height: 1.3;
+    }
+
+    .serviceCard--content {
+        background-color: #f2f2f2;
+        padding: 3rem;
+        .serviceCard__title {
+            font-weight: normal;
+            font-size: 1.3rem;
+            padding-bottom: 0.5rem;
+        }
+        .serviceCard__paragraph {
+            font-size: 0.9rem;
+        }
+    }
+
+
+    .lists > * div{
+        padding: 4rem 1.2rem;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .lists > *:nth-child(odd) div {
+        background-color: #FFE6D9;
+        color: #827F7D;
+    }
+    .lists > *:nth-child(even) div {
+        background-color: #F2f2f2;
+        color: $brand-color;
+    }
+
+}

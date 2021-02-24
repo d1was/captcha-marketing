@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Contact
+
+# Model Form Field configuration
+form: $/captchamarketing/consultationform/models/contact/fields.yaml
+
+# Model Class name
+modelClass: Captchamarketing\Consultationform\Models\Contact
+
+# Default redirect location
+defaultRedirect: captchamarketing/consultationform/contact
+
+# Create page
+create:
+    title: Create Contact
+    redirect: captchamarketing/consultationform/contact/update/:id
+    redirectClose: captchamarketing/consultationform/contact
+
+# Update page
+update:
+    title: Edit Contact
+    redirect: captchamarketing/consultationform/contact
+    redirectClose: captchamarketing/consultationform/contact
+
+# Preview page
+preview:
+    title: Preview Contact

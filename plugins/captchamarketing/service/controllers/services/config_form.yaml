@@ -1,0 +1,17 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Services
+form: $/captchamarketing/service/models/service/fields.yaml
+modelClass: Captchamarketing\Service\Models\Service
+
+create:
+    title: Add New Service
+    flashSave: Service has been created!
+
+update:
+    title: Edit Blog Post
+    redirect: captchamarketing\service\services\index
+    flashSave: Service updated successfully!
+    flashDelete: Service has been deleted.

@@ -1,45 +1,158 @@
 url = "/"
 layout = "app"
+[testimonialList]
+maxItems=3
 ==
+{% put head %}
+    <title>Home | CaptchaMarketing</title>
+{% endput %}
+
 
 <section id="home" class="hero-section">
     <div class="container">
         <div class="row justify-content-center align-items-end pb-5">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="text-content d-flex flex-column align-items-center">
                     <h4 class="soft-text">A digital agency that helps you go</h4>
-                    <h1 class="hard-text">BEYOND YOUR EXPECTATION</h1>
+                    <h1 class="hard-text">Beyond Your EXPECTATION</h1>
                     <button class="btn btn-primary px-5">Request a consultation</button>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 
 
 <section class="about-section">
     <div class="container">
-        <div class="row justify-content-center py-4">
-            <div class="col-md-6 contentBox">
+        <div class="row justify-content-center ">
+            <div class="col-md-12 contentBox">
                 <h2 class="text-center about__heading">Digital Marketing Agency Sydney</h2>
                 <p class="about__content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae consequatur eligendi error et illo iusto libero odio recusandae sapiente sed, similique velit, voluptatem. Cum, ea explicabo harum illum iste minus nisi nulla optio reprehenderit, repudiandae rerum tempora vitae voluptate voluptates voluptatibus? Excepturi harum in numquam perferendis recusandae reprehenderit sapiente. Autem doloribus eos eum inventore laboriosam nemo nisi non soluta totam vitae. Ab ad adipisci alias, aliquam, amet aspernatur autem consequuntur doloribus ipsa ipsum iste laboriosam libero maxime minima mollitia necessitatibus nihil nostrum optio quae quia quibusdam quis quo reprehenderit tempora veritatis vero voluptates voluptatum. At fugit porro ut veritatis!
+                    We are an award winning Digital Marketing Agency based in Sydney. We specialise in Google Ads, Social Media Marketing, Web Design, Graphics Design, and Animation and all other digital marketing services. Powered by creativity and driven by ambition, out team of digital marketing specialists have delivered campaigns for some Australia's biggest brands and are sure to lead you on the road to digital success.
                 </p>
             </div>
         </div>
     </div>
 </section>
 
+<!--<section class="service2-section">-->
+<!--    <div class="container">-->
+<!--        <div class="section-subtitle">Services</div>-->
+<!--        <div class="section-title">Digital Marketing Services</div>-->
+<!--        <div class="row justify-content-between  service-list ">-->
+<!--            <div class="col-sm-6 row align-items-center ">-->
+<!--                <div class="col-2">-->
+<!--                    <div class="service-icon">-->
+<!--                        <?xml version="1.0" encoding="utf-8"?>-->
+<!--                        &lt;!&ndash; Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  &ndash;&gt;-->
+<!--                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"-->
+<!--                             viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">-->
+<!--<path d="M47.4,26.9c1.5-4.1,5.7-15.9,5.7-19.6c0-3.3-2-6.1-5.5-6.1C42,1.2,37,17.6,35.5,21.6C34.2,18,28.6,0,23.6,0-->
+<!--	c-3.9,0-5.7,2.9-5.7,6.5c0,4.4,4.3,15.9,5.8,20.3c-0.8-0.3-1.6-0.5-2.5-0.5c-2.9,0-6,3.6-6,6.6c0,1.1,0.6,2.7,1,3.7-->
+<!--	c-4.6,1.3-6.4,4.3-6.4,9c0,9,8.5,18.6,20.6,18.6c14.7,0,23.9-11.1,23.9-25.4C54.2,33.3,53.4,28.4,47.4,26.9L47.4,26.9z M43,13.5-->
+<!--	c0.5-1.5,2.6-8,4.6-8c1.1,0,1.4,1.1,1.4,2C49,9.8,44.1,23,43.1,26l-4.3-0.8L43,13.5z M21.8,6c0-1.5,1.8-5.7,5.8,5.9l4.3,12.5-->
+<!--	c-2-0.2-3.5-0.4-4.4,0.2C26.1,21,21.8,9.7,21.8,6L21.8,6z M21.5,30.5c3.7,0,8.4,11.8,8.4,13.4c0,0.6-0.6,1.4-1.3,1.4-->
+<!--	c-2.6,0-9.6-9.6-9.6-12.2C19,32.2,20.5,30.5,21.5,30.5L21.5,30.5z M44.5,53.8c-3.6,4-8.3,6.1-13.7,6.1c-7.4,0-13.3-4.1-16.1-11-->
+<!--	c-2.1-5.4,0.5-8.5,2.6-8.5c1.4,0,6.8,7.5,6.8,9.1c0,0.6-1,1-1.5,1c-2,0-2.8-1.9-6.4-6.4c-3.7,3.7,2.6,10.9,7.3,10.9-->
+<!--	c3.3,0,5.4-3,4.8-5.3c0.5,0,1,0,1.5-0.1c0.1,3.4,1.1,7.4,5.2,7.7c0-0.1,0.3-0.9,0.3-0.9c0-2.2-1.3-4.1-1.3-6.3c0-3.5,2.7-7,5.5-9-->
+<!--	c1-0.8,2.2-1.2,3.4-1.6c1.2-0.5,2.5-1,3.4-1.9c-0.1-1.4-0.7-2.6-2.1-2.6c-3.5,0-15.1,0.5-15.1-5c0-0.8,0-1.6,2.2-1.6-->
+<!--	c4,0,14.3,1,17.3,3.6C50.7,34,51.4,46.1,44.5,53.8L44.5,53.8z M32.2,38c1.2,0.4,2.5,0.5,3.7,0.8c-0.9,0.7-1.8,1.5-2.5,2.4-->
+<!--	C33,40.1,32.6,39.1,32.2,38z"/>-->
+<!--</svg>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col">-->
+<!--                    <h5 class="service-title">Google Ads</h5>-->
+<!--                    <p class="service-content">We scale your business with ads on biggest SE in the world.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col-sm-6 row align-items-center">-->
+<!--                <div class="col-2">-->
+<!--                    <div class="service-icon">-->
+
+<!--                        <?xml version="1.0" encoding="utf-8"?>-->
+<!--                        &lt;!&ndash; Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  &ndash;&gt;-->
+<!--                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"-->
+<!--                             viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">-->
+<!--<style type="text/css">-->
+<!--	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}-->
+<!--</style>-->
+<!--                            <g>-->
+<!--	<path d="M22.2,58c-5.4,0-13.3-1-20-5.8c-2-1.4-2.8-4.1-1.8-6.4c0.9-2.3,3.4-3.6,5.9-3.1l0,0c0,0,1,0.2,2.5,0.1-->
+<!--		c-1-1.4-1.9-3-2.5-4.7c-0.2-0.6-0.3-1.1-0.3-1.7c-2.5-2.9-3.8-6.5-3.8-10.5c0-0.9,0.2-1.8,0.7-2.5C2,20,1.7,15.5,4.6,10.7-->
+<!--		C5.5,9.3,7,8.3,8.7,8.1c0.1,0,0.1,0,0.2,0c1.8-0.1,3.4,0.6,4.5,1.8l0,0c0.7,0.7,6.1,6.4,13,8.3C28,11.2,34.4,6,42.1,6-->
+<!--		c3.4,0,6.7,1,9.3,2.9c0.7-0.2,1.6-0.5,2.4-1.1c1.6-1.1,3.7-1.3,5.4-0.4c1.7,0.8,2.9,2.4,3.1,4.3c0,0.1,0,0.2,0,0.3-->
+<!--		c0,0.1,0,0.3,0,0.6c1.4,1.4,1.9,3.4,1.3,5.2c-0.5,1.7-2.1,3.8-5.4,6.8C58,32,54.5,51.8,29.6,57.4C29.4,57.4,26.4,58,22.2,58z-->
+<!--		 M5.4,47.6c-0.2,0-0.3,0.1-0.3,0.1c0,0,0,0.1,0,0.1C5,47.9,5,48,5.1,48.1c5.6,4.1,12.4,4.9,17.1,4.9c3.7,0,6.3-0.5,6.4-0.5-->
+<!--		c22.6-5.1,24.8-23.6,24.9-29.2c0-0.7,0.3-1.4,0.8-1.8c4.2-3.7,4.7-5,4.7-5.1c0.1-0.2-0.1-0.4-0.2-0.4c0,0-0.1-0.1-0.1-0.1-->
+<!--		c-1.1-0.5-1.7-1.8-1.3-3c0.1-0.3,0.1-0.5,0.1-0.7c0-0.1-0.1-0.2-0.2-0.3c-0.1,0-0.1-0.1-0.2-0.1c-0.1,0-0.2,0-0.4,0.1-->
+<!--		c-2.2,1.5-4.5,2-5.6,2.1c-0.7,0.1-1.3-0.1-1.8-0.5c-1.9-1.6-4.5-2.4-7.1-2.4c-6.1,0-11,4.5-11.2,10.4c0,0.7-0.3,1.4-0.9,1.8-->
+<!--		c-0.5,0.5-1.2,0.7-1.9,0.6c-9.5-1.3-17-8.9-18.5-10.4c0,0-0.1-0.1-0.1-0.1c-0.1-0.1-0.3-0.1-0.4-0.1c-0.2,0-0.3,0.2-0.4,0.3-->
+<!--		c-1.8,3-2,6.2-0.7,9.4c0.4,1,0.2,2.2-0.7,2.9c-0.1,0.1-0.2,0.2-0.2,0.2c0,3.2,1,5.8,3.2,7.8c0.7,0.7,0.9,1.6,0.7,2.5-->
+<!--		c0,0.1,0,0.2,0,0.3c0.8,2.5,2.4,4.5,4.6,5.8c0.8,0.5,1.3,1.4,1.2,2.4c-0.1,1-0.8,1.8-1.7,2.1c-4.6,1.5-9.5,0.8-9.7,0.7-->
+<!--		C5.5,47.6,5.4,47.6,5.4,47.6z M58.5,15.7C58.5,15.7,58.5,15.7,58.5,15.7C58.5,15.7,58.5,15.7,58.5,15.7z"/>-->
+<!--</g>-->
+<!--                            <path class="st0" d="M-5.7,0.9L-5.7,0.9L-5.7,0.9z"/>-->
+<!--                            <path class="st0" d="M32,32L32,32L32,32z"/>-->
+<!--</svg>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col">-->
+<!--                    <h5 class="service-title">Social Media</h5>-->
+<!--                    <p class="service-content">-->
+<!--                        We help potential customers discover your brand on all major social platforms.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col-sm-6 row align-items-center">-->
+<!--                <div class="col-2">-->
+<!--                    <div class="service-icon">-->
+
+<!--                        <?xml version="1.0" encoding="utf-8"?>-->
+<!--                        &lt;!&ndash; Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  &ndash;&gt;-->
+<!--                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"-->
+<!--                             viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">-->
+<!--<path d="M40.5,4.2c-22,0-32.6,28.9-19,45.8c4.7,5.9,11.4,9.8,19,9.8c4.7,0,9.1-1.4,12.8-3.9C47.7,60.9,40.2,64,32,64-->
+<!--	c-0.5,0-1,0-1.5,0C13.5,63.2,0,49.2,0,32C0,14.3,14.3,0,32,0h0.1c8.1,0,15.6,3.1,21.2,8.1C49.6,5.6,45.2,4.2,40.5,4.2L40.5,4.2z-->
+<!--	 M53.6,55.5c-5.3,3.2-11.7,3-17-0.7C43.9,52.1,49.2,43,49.2,32c0-10.9-5.3-20.1-12.6-22.8C42,5.4,48.4,5.3,53.8,8.6-->
+<!--	C67.5,21.3,67.4,42.9,53.6,55.5z"/>-->
+<!--</svg>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col">-->
+<!--                    <h5 class="service-title">Web Design</h5>-->
+<!--                    <p class="service-content">-->
+<!--                        We design and build websites that capture the attention.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col-sm-6 row align-items-center">-->
+<!--                <div class="col-2">-->
+<!--                    <div class="service-icon">-->
+<!--                        <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">-->
+<!--                            <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>-->
+<!--                        </svg>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col">-->
+<!--                    <h5 class="service-title">Elegant and Modern Design</h5>-->
+<!--                    <p class="service-content">Lorem ipsum dolor sit amet,  deserunt dolore ea ipsa iure iusto laboriosam odio, praesentium vitae.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
 
 <section class="service-section">
     <div class="container">
-        <div class="row justify-content-center py-4 ">
-            <div class="col-sm-6">
-                <h3 class="service-section__title">Digital Marketing Services</h3>
-            </div>
-        </div>
-        <div class="row gy-4 px-5 justify-content-center">
+        <h5 class="service-section__title pb-5">Digital Marketing Services</h5>
+        <div class="row gy-4 justify-content-center">
             <div class="col-6">
                 <div class="serviceCard serviceCard--image">
 
@@ -88,90 +201,26 @@ layout = "app"
 </section>
 
 
-
 <section class="testimonial-section">
-<div class="container">
-    <h3 class="testimonial__heading ">What our clients say about <b>Captcha</b></h3>
-    <div class="row  justify-content-center py-4">
-                <div class="col-sm-3">
-                    <div class="testimonial__card">
-                        <h5 class="testimonial__card__title">Royal Big Master Wine</h5>
-                        <p class="testimonial__card__paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur doloremque doloribus dolorum ducimus expedita explicabo harum hic laboriosam modi, obcaecati pariatur porro praesentium quisquam similique voluptas voluptates voluptatibus, voluptatum!
-                        </p>
+    <div class="container">
+        <h3 class="testimonial__heading ">What our clients say about <strong>Captcha</strong></h3>
+        <div class="row  justify-content-center py-4 gy-3">
+            {% for testimonial in testimonialList.testimonials %}
+            <div class="col-md-4 column">
+                <div class="testimonial__card">
+                    <h5 class="testimonial__card__title">{{ testimonial.company }}</h5>
+                    <p class="testimonial__card__paragraph">
+                        {{ testimonial.paragraph }}
+                    </p>
 
-                        <div class="testimonial__card__credits">
-                            <div class="testimonial__card__credits__name">Neha Mishra</div>
-                            <div class="testimonial__card__credits__position"><b>Global Brand Manager</b></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 ">
-                    <div class="testimonial__card testimonial__card--odd">
-                        <h5 class="testimonial__card__title">Smart Logistics, Sydney</h5>
-                        <p class="testimonial__card__paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur doloremque doloribus dolorum ducimus expedita explicabo harum hic laboriosam modi, obcaecati pariatur porro praesentium quisquam similique voluptas voluptates voluptatibus, voluptatum!
-                        </p>
-
-                        <div class="testimonial__card__credits">
-                            <div class="testimonial__card__credits__name">Bishal Shrestha</div>
-                            <div class="testimonial__card__credits__position"><b>Director</b></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="testimonial__card ">
-                        <h5 class="testimonial__card__title">Royal Big Master Wine</h5>
-                        <p class="testimonial__card__paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur doloremque doloribus dolorum ducimus expedita explicabo harum hic laboriosam modi, obcaecati pariatur porro praesentium quisquam similique voluptas voluptates voluptatibus, voluptatum!
-                        </p>
-
-                        <div class="testimonial__card__credits">
-                            <div class="testimonial__card__credits__name">Neha Mishra</div>
-                            <div class="testimonial__card__credits__position"><b>Global Brand Manager</b></div>
-                        </div>
-
+                    <div class="testimonial__card__credits">
+                        <div class="testimonial__card__credits__name">{{ testimonial.name }}</div>
+                        <div class="testimonial__card__credits__position"><b>{{ testimonial.position }}</b></div>
                     </div>
                 </div>
             </div>
-    </div>
-</section>
-
-
-<section class="consultation-form">
-    <div class="container " >
-        <h1 class="consultation__heading">Request a Consultation</h1>
-    <div class="row justify-content-center">
-        <div class="col-6">
-            <form action="" class="row g-3 ">
-                <div class="col-md-6">
-                    <input type="text" name="" placeholder="What are you intrested in ?" id="" class="form-control">
-                </div>
-                <div class="col-md-6">
-                    <input type="text" name="" placeholder="Monthly Budget" id="" class="form-control">
-                </div>
-                <div class="col-md-6">
-                    <input type="text" name="" placeholder="Name" id="" class="form-control">
-                </div>
-                <div class="col-md-6">
-                    <input type="text" name="" placeholder="Email" id="" class="form-control">
-                </div>
-                <div class="col-md-6">
-                    <input type="text" name="" placeholder="Phone" id="" class="form-control">
-                </div>
-                <div class="col-md-6">
-                    <input type="text" name="" placeholder="Website" id="" class="form-control">
-                </div>
-                <div class="col-12">
-                    <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
-                </div>
-                <div class="col-12" style="text-align: center">
-                    <button class="btn btn-primary px-5">Submit</button>
-                </div>
-
-            </form>
+            {% endfor %}
         </div>
     </div>
-
-    </div>
 </section>
+

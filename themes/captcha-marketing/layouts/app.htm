@@ -1,3 +1,28 @@
+
+[menu]
+menu_id = 1
+[contactForm]
+==
+use Captchamarketing\Consultationform\Models\Contact;
+
+function onSubmitContactForm()
+{
+$data = post();
+$rules = [
+'name' => 'required',
+'email' => 'required|email',
+'phone' => 'required',
+'message' => 'required|max:250'
+];
+$validation = Validator::make($data, $rules);
+
+if ($validation->fails()) {
+    throw new ValidationException($validation);
+}
+Contact::create($data);
+Flash::success('Your message has been sent succesfully!');
+}
+==
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +31,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link href="/themes/captcha-marketing/assets/css/app.css" rel="stylesheet">
+    <link href="{{ url('themes/captcha-marketing/assets/css/app.css') }}" rel="stylesheet">
 
     {% placeholder head %}
 </head>
@@ -16,39 +41,41 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg ">
-                        <a href="" class="navbar-brand">
-                            <img src="themes/captcha-marketing/assets/images/brand-logo.png" width="120" alt="">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a href="{{ url('/') }}" class="navbar-brand">
+                            <img src="{{ url('themes/captcha-marketing/assets/images/brand-logo.png') }}" width="160" alt="">
                         </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="toggler-icon"></span>
-                            <span class="toggler-icon"></span>
-                            <span class="toggler-icon"></span>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
                         </button>
 
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                             <ul id="nav" class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a href="" class="page-scroll active dd-menu">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="page-scroll  dd-menu">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="page-scroll dd-menu">Case Studies</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="page-scroll dd-menu">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="page-scroll dd-menu">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="page-scroll dd-menu">Contact</a>
-                                </li>
+<!--                                <li class="nav-item">-->
+<!--                                    <a href="" class="page-scroll active dd-menu">Home</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item dropdown">-->
+<!--                                    <a href="#" class="page-scroll dd-menu dropdown-toggle" id="navbarDropdownMenuLink" data-bs-toggle="dropdown">Services</a>-->
+<!--                                    <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">-->
+<!--                                        <li><a class="dropdown-item" href="/service/google-ads-management">Google Ads Management</a></li>-->
+<!--                                        <li><a class="dropdown-item" href="/service/social-media-marketing">Social Media Marketing</a></li>-->
+<!--                                        <li><a class="dropdown-item" href="/service/web-design">Web Design</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a href="" class="page-scroll dd-menu">Case Studies</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a href="" class="page-scroll dd-menu">About</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a href="" class="page-scroll dd-menu">Blog</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a href="" class="page-scroll dd-menu">Contact</a>-->
+<!--                                </li>-->
 
+                                {% component 'menu' %}
 
 
 
@@ -64,20 +91,65 @@
 
 {% page %}
 
-<footer class="footer">
+
+    <section class="consultation-form">
+        <div class="container" >
+            <h1 class="consultation__heading">Request a Consultation</h1>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="message" id="message"></div>
+
+                    <form data-request="onSubmitContactForm" data-request-validate data-request-flash data-request-update="success: '#message'" class="row g-3 ">
+                        <div class="alert alert-danger" data-validate-error>
+                            <p data-message></p>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="intrest" placeholder="What are you intrested in ?" id="" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="budget" placeholder="Monthly Budget" id="" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="name" placeholder="Name" id="" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="email" placeholder="Email" id="" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="phone" placeholder="Phone" id="" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="website" placeholder="Website" id="" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12" style="text-align: center">
+                            <button      data-attach-loading class="btn btn-primary btn-full px-5">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-4 info">
+        <div class="row justify-content-center gy-4">
+            <div class="col-md-4 info">
                 <h3 class="footer__heading">Contact us</h3>
                 <div class="name"><b>Captcha Marketing</b></div>
                 <div class="address">Marsfield, Sydney</div>
                 <div class="phone_number">0415505292 | 0422023558</div>
                 <div class="email">info.captchamarketing@gmail.com</div>
                 <div class="button">
-                    <button class="btn btn-primary">Contact us NOW</button>
+                    <button class="btn btn-primary btn-full">Contact us NOW</button>
                 </div>
             </div>
-            <div class="col-sm-4 services">
+            <div class="col-md-4 services">
                 <h3 class="footer__heading">Services</h3>
                 <li class="item">Google Ads</li>
                 <li class="item">Social Media Marketing</li>
@@ -87,5 +159,9 @@
         </div>
     </div>
 </footer>
+    <script src="/themes/captcha-marketing/assets/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    {% framework extras %}
+
 </body>
 </html>
