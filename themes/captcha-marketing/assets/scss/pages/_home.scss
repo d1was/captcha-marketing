@@ -5,6 +5,7 @@
     background-position: 50% 70%;
     position: relative;
     z-index: 1;
+    padding-bottom: 2.5rem;
 
     &::before {
         content: '';
@@ -35,7 +36,7 @@
                 font-weight: bold;
                 font-size: 3rem;
                 letter-spacing: 1px;
-                color: $brand-color;
+                color: $white;
             }
         }
     }
@@ -48,16 +49,19 @@
     .contentBox {
         .about__heading {
             text-align: center;
-            color: #e57a38;
+            color: $heading-black;
             padding-bottom: 1rem;
-            font-size: 2.4rem;
-
+            font-size: 2.2rem;
+            font-weight: 700;
         }
         .about__content {
-            color: $gray-500;
+            color: $heading-black;
             text-align: center;
-            font-size: 1.4rem;
-            line-height: 1.4;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            .service {
+                color: $another-orange;
+            }
         }
     }
 }
@@ -105,7 +109,7 @@
     padding-top: 2rem;
 
     &__title {
-        color: #e57a38;
+        color: $heading-black;
         font-size: 2.7rem;
         font-weight: 300;
         text-align: center;
@@ -113,6 +117,38 @@
     }
 }
 
+.blogs-section {
+    background-color: #f2f2f2;
+    &__heading {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        color: $heading-black;
+        margin-bottom: 2rem;
+        & strong {
+            font-weight: bold;
+        }
+    }
+
+    .blog__post {
+        .blog__image {
+            width: 100%;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .blog__title {
+            color: $heading-black;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .blog__excerpt {
+            font-size: 0.9rem;
+        }
+    }
+}
 
 .testimonial-section {
     .testimonial__heading {
@@ -120,6 +156,7 @@
         font-size: 2.8rem;
         font-weight: lighter;
         letter-spacing: 1px;
+        color: $heading-black;
         & strong {
             font-weight: bold;
         }
@@ -133,11 +170,13 @@
         &__title {
             font-size: 1.1rem;
             font-weight: 700;
+            color: $heading-black;
         }
 
         &__paragraph {
             padding-top: 1rem;
             font-size: 0.9rem;
+            color: $heading-black;
         }
 
         &__credits {
@@ -162,18 +201,21 @@
 
 .consultation-form {
     padding-top: 1.7rem;
-    background-color: #F2f2f2;
+    background-color: #fd9f6d;
     padding-bottom: 2rem;
     .consultation__heading {
         text-align: center;
         padding-bottom: 1rem;
-        font-size: 3rem;
+        font-size: 2.4rem;
         font-weight: lighter;
+        color: $heading-black;
     }
 
     input, textarea {
         &::placeholder {
-          color: $light-orange;
+          color: $gray-500;
         }
     }
 }
+
+

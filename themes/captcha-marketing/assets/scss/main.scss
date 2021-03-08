@@ -20,12 +20,16 @@
 
 // 4. Layout-related sections
 @import 'layout/navbar',
-'layout/footer';
+'layout/footer',
+'layout/header'
+;
 
 // 5. Components
 @import
 'components/buttons',
-'components/serviceCard';
+'components/serviceCard',
+'components/megamenu';
+
 
 // 6. Page-specific styles
 @import 'pages/home',

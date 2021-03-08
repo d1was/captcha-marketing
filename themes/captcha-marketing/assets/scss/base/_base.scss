@@ -45,11 +45,12 @@ h1,h2,h3,h4,h5,h6 {
 @include media-breakpoint-up(md) {
     section {
         padding: 5rem 8rem;
+
     }
 }
 
 @include media-breakpoint-up(xxl) {
     section {
-        padding: 5rem 22rem;
+        padding: 5rem 18rem;
     }
 }

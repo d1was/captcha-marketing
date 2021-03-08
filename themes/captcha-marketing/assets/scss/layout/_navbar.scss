@@ -1,4 +1,7 @@
 .navbar {
+    position: relative;
+    padding: 0;
+
     .navbar-nav {
         .nav-item {
             font-family: $headings-font-family;

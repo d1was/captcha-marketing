@@ -1,0 +1,66 @@
+.megamenu {
+    position: absolute;
+    top: 100%;
+    left:-1222222222222px;
+    background-color: $white;
+    z-index: 1111;
+    width: 100%;
+    display: block;
+    opacity: 0;
+    transition-duration: .5s;
+    transition-property: opacity;
+    transition-delay: 10ms;
+    border-bottom: 1px solid #111;
+
+    &.active {
+        left: 0;
+        opacity: 1;
+
+    }
+
+    .submenu {
+        padding: 2.4rem 2rem;
+        position: relative;
+
+        .submenu-title {
+            font-weight: 500;
+            color: #28d2ff;
+            font-size: 1.1rem;
+        }
+
+        .submenu-ul {
+            list-style-type: none;
+            margin: .5rem 0 0;
+            padding-left: 0;
+
+            .submenu-li {
+                font-size: 0;
+                margin-top: .6rem;
+
+                a {
+                    color: #444;
+                    line-height: 1.3rem;
+                    font-size: .9rem;
+                    display: inline-block;
+                }
+            }
+        }
+
+        &.active {
+            background-color: #eee;
+            .submenu-title {
+                color: $brand-color;
+            }
+        }
+    }
+
+    .submenu+.submenu::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 1.75rem;
+        bottom: 1.75rem;
+        border-left: 1px solid #eee;
+        left:0;
+    }
+}

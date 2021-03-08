@@ -20,12 +20,12 @@
     }
 
     &__title {
-        color: #B9B9B9;
+        color: $heading-black;
         font-weight: bold;
     }
     &__paragraph {
         text-align: center;
-        color: $gray-600;
+        color: $orange-300;
     }
 
 }

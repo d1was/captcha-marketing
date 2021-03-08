@@ -1,0 +1,42 @@
+.header {
+    position: fixed;
+    z-index: 11111;
+    width: 100%;
+    .question {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 22px;
+        margin-right: 20px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: $orange-500;
+
+    }
+    .number-btn {
+        margin-left: 20px;
+    }
+
+    .header-top {
+        background-color: $white;
+    }
+
+    .header-bottom {
+        background-color: rgba($dark-grey, 0.1);
+        position: relative;
+        transition: background-color 0.5s ease;
+        &.almost-dark {
+            background-color: rgba(50,50,50, 0.9);
+        }
+        .nav-item  {
+            a {
+                color: $white;
+                font-size: 1.1rem;
+                line-height: 60px;
+                &.active {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 
 .btn {
+    padding: .4rem 2rem;
     &.btn-primary {
         color: $brand-color;
         background-color: $orange-100;
@@ -9,5 +10,47 @@
         background-color: $light-orange;
         color: $white;
         border-radius: 0.5rem;
+    }
+
+    &.btn-outline-orange {
+        background-color: transparent;
+        color: $orange-500;
+        border-color: $orange-500;
+    }
+    &.btn-orange {
+        background-color: $another-orange;
+        color: $white;
+        border-color: $another-orange;
+    }
+
+
+    &.btn-black {
+        color: $white;
+        background-color: $heading-black;
+        border-color: $heading-black;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &:hover {
+
+        }
+
+        &::befores {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left:0;
+            right:0;
+            visibility: visible;
+            content: attr(text);
+            color: $white;
+            text-align: center;
+            font-weight: 500;
+            background-color: $heading-black;
+            line-height: 34px;
+        }
     }
 }
