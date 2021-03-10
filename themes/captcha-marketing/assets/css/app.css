@@ -9917,21 +9917,6 @@ body {
 .blogs-section {
   background-color: #f2f2f2;
 }
-@media (min-width: 992px) {
-  .blogs-section__heading {
-    font-size: 2.6rem;
-    margin-bottom: 2rem;
-  }
-  .blogs-section .blog__post {
-    padding-bottom: unset;
-  }
-  .blogs-section .blog__post .blog__title {
-    font-size: 1.3rem;
-  }
-  .blogs-section .blog__post .blog__excerpt {
-    font-size: 1.1rem;
-  }
-}
 .blogs-section__heading {
   text-align: center;
   font-size: 1.6rem;
@@ -9962,12 +9947,22 @@ body {
 .blogs-section .blog__post .blog__excerpt {
   font-size: 0.8rem;
 }
-
 @media (min-width: 992px) {
-  .testimonial-section .testimonial__heading {
-    font-size: 2.8rem;
+  .blogs-section__heading {
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+  }
+  .blogs-section .blog__post {
+    padding-bottom: unset;
+  }
+  .blogs-section .blog__post .blog__title {
+    font-size: 1.3rem;
+  }
+  .blogs-section .blog__post .blog__excerpt {
+    font-size: 1.1rem;
   }
 }
+
 .testimonial-section .testimonial__heading {
   text-align: center;
   font-size: 1.8rem;
@@ -10003,6 +9998,11 @@ body {
 }
 .testimonial-section .column:nth-of-type(2) .testimonial__card .testimonial__card__title {
   color: #6c757d;
+}
+@media (min-width: 992px) {
+  .testimonial-section .testimonial__heading {
+    font-size: 2.8rem;
+  }
 }
 
 .consultation-form {

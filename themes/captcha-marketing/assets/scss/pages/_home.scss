@@ -134,21 +134,7 @@
 .blogs-section {
     background-color: #f2f2f2;
 
-    @include media-breakpoint-up(lg) {
-        &__heading {
-            font-size: 2.6rem;
-            margin-bottom: 2rem;
-        }
-        .blog__post {
-            padding-bottom: unset;
-            .blog__title {
-                font-size: 1.3rem;
-            }
-            .blog__excerpt {
-                font-size: 1.1rem;
-            }
-        }
-    }
+
     &__heading {
         text-align: center;
         font-size: 1.6rem;
@@ -179,14 +165,25 @@
             font-size: 0.8rem;
         }
     }
+    @include media-breakpoint-up(lg) {
+        &__heading {
+            font-size: 2.6rem;
+            margin-bottom: 2rem;
+        }
+        .blog__post {
+            padding-bottom: unset;
+            .blog__title {
+                font-size: 1.3rem;
+            }
+            .blog__excerpt {
+                font-size: 1.1rem;
+            }
+        }
+    }
 }
 
 .testimonial-section {
-    @include media-breakpoint-up(lg) {
-        .testimonial__heading {
-            font-size: 2.8rem;
-        }
-    }
+
     .testimonial__heading {
         text-align: center;
         font-size: 1.8rem;
@@ -231,6 +228,11 @@
         }
         color: $gray-600;
         background-color: #FFE6D9;
+    }
+    @include media-breakpoint-up(lg) {
+        .testimonial__heading {
+            font-size: 2.8rem;
+        }
     }
 }
 
