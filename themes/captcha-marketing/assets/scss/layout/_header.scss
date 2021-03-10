@@ -4,8 +4,8 @@
     width: 100%;
     .question {
         display: inline-block;
-        font-size: 1rem;
-        font-weight: 700;
+        font-size: 0.9rem;
+        font-weight: 400;
         line-height: 22px;
         margin-right: 20px;
         vertical-align: middle;
@@ -19,6 +19,16 @@
 
     .header-top {
         background-color: $white;
+
+        .mobile-menu {
+            .text {
+                padding-left: 1rem;
+                text-align: center;
+                color: $another-orange;
+                font-weight: 300;
+                font-size: 0.9rem;
+            }
+        }
     }
 
     .header-bottom {
@@ -26,12 +36,12 @@
         position: relative;
         transition: background-color 0.5s ease;
         &.almost-dark {
-            background-color: rgba(50,50,50, 0.9);
+            background-color: rgba(50,50,50, 1);
         }
         .nav-item  {
             a {
                 color: $white;
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 line-height: 60px;
                 &.active {
                     color: $white;

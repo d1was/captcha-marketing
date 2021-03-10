@@ -31,7 +31,6 @@ a {
 
     @include on-event {
         color: $text-color;
-        text-decoration: underline;
     }
 }
 
@@ -44,13 +43,8 @@ h1,h2,h3,h4,h5,h6 {
 
 @include media-breakpoint-up(md) {
     section {
-        padding: 5rem 8rem;
+        padding: 5rem 12rem;
 
     }
 }
 
-@include media-breakpoint-up(xxl) {
-    section {
-        padding: 5rem 18rem;
-    }
-}

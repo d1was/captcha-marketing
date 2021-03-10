@@ -1,5 +1,5 @@
 .hero-section {
-    height: 36rem;
+    height: 40rem;
     background-image: image('1.jpeg');
     background-size: cover;
     background-position: 50% 70%;
@@ -37,6 +37,7 @@
                 font-size: 3rem;
                 letter-spacing: 1px;
                 color: $white;
+                text-align: center;
             }
         }
     }
@@ -50,17 +51,24 @@
         .about__heading {
             text-align: center;
             color: $heading-black;
-            padding-bottom: 1rem;
-            font-size: 2.2rem;
-            font-weight: 700;
+            font-size: 1.7rem;
         }
         .about__content {
             color: $heading-black;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1rem;
             line-height: 1.5;
             .service {
                 color: $another-orange;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            .about__heading {
+                padding-bottom: 1rem;
+                font-size: 2.4rem;
+            }
+            .about__content {
+                font-size: 1.6rem;
             }
         }
     }
@@ -110,18 +118,40 @@
 
     &__title {
         color: $heading-black;
-        font-size: 2.7rem;
+        font-size: 1.8rem;
         font-weight: 300;
         text-align: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+        &__title {
+            font-size: 2.8rem;
+        }
 
     }
 }
 
 .blogs-section {
     background-color: #f2f2f2;
+
+    @include media-breakpoint-up(lg) {
+        &__heading {
+            font-size: 2.6rem;
+            margin-bottom: 2rem;
+        }
+        .blog__post {
+            padding-bottom: unset;
+            .blog__title {
+                font-size: 1.3rem;
+            }
+            .blog__excerpt {
+                font-size: 1.1rem;
+            }
+        }
+    }
     &__heading {
         text-align: center;
-        font-size: 2.2rem;
+        font-size: 1.6rem;
         font-weight: lighter;
         letter-spacing: 1px;
         color: $heading-black;
@@ -132,6 +162,7 @@
     }
 
     .blog__post {
+        padding-bottom: 1rem;
         .blog__image {
             width: 100%;
             img {
@@ -142,19 +173,25 @@
         .blog__title {
             color: $heading-black;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         .blog__excerpt {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
     }
 }
 
 .testimonial-section {
+    @include media-breakpoint-up(lg) {
+        .testimonial__heading {
+            font-size: 2.8rem;
+        }
+    }
     .testimonial__heading {
         text-align: center;
-        font-size: 2.8rem;
+        font-size: 1.8rem;
         font-weight: lighter;
+        font-family: "Roboto";
         letter-spacing: 1px;
         color: $heading-black;
         & strong {
@@ -206,14 +243,15 @@
     .consultation__heading {
         text-align: center;
         padding-bottom: 1rem;
-        font-size: 2.4rem;
+        font-size: 2.6rem;
+        font-family: "Roboto";
         font-weight: lighter;
         color: $heading-black;
     }
 
     input, textarea {
         &::placeholder {
-          color: $gray-500;
+          color: $heading-black;
         }
     }
 }

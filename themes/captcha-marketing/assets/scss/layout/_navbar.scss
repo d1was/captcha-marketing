@@ -2,6 +2,10 @@
     position: relative;
     padding: 0;
 
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+
     .navbar-nav {
         .nav-item {
             font-family: $headings-font-family;

@@ -2,9 +2,15 @@
     padding: 20px;
     height: 100%;
 
-    @include media-breakpoint-up('md') {
+    @include media-breakpoint-up('lg') {
         &.serviceCard--content {
             padding: 3rem 5rem;
+        }
+        &__title {
+            font-weight: bold;
+        }
+        &__paragraph {
+            text-align: center;
         }
     }
 
@@ -21,11 +27,14 @@
 
     &__title {
         color: $heading-black;
+        font-size: 1rem;
         font-weight: bold;
+
     }
     &__paragraph {
         text-align: center;
         color: $orange-300;
+        font-size: 0.8rem;
     }
 
 }

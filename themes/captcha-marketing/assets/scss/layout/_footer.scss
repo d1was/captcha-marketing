@@ -1,6 +1,6 @@
 .footer {
     padding-top: 3rem;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     background-color: $black;
 
     &__heading {
@@ -8,7 +8,7 @@
     }
 
     .info, .services {
-        color: $gray-500;
+        color: $gray-200;
         font-size: 1.2rem;
     }
 
