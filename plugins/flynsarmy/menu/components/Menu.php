@@ -60,4 +60,10 @@ class Menu extends ComponentBase
 
 //		return $menu->render($this->controller, $settings);
 	}
+
+	public function menus()
+    {
+        $menu = MenuModel::find($this->property('menu_id', 0));
+        return $menu;
+    }
 }

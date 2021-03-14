@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    z-index: 11111;
+    z-index: 11;
     width: 100%;
     .question {
         display: inline-block;
@@ -11,6 +11,8 @@
         vertical-align: middle;
         text-transform: uppercase;
         color: $orange-500;
+        flex: 1;
+        text-align: center;
 
     }
     .number-btn {
@@ -19,22 +21,54 @@
 
     .header-top {
         background-color: $white;
-
+        .brand-logo {
+            width: 100%;
+            img {
+                width: 100%;
+                vertical-align: center;
+            }
+        }
         .mobile-menu {
             .text {
-                padding-left: 1rem;
                 text-align: center;
                 color: $another-orange;
                 font-weight: 300;
-                font-size: 0.9rem;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+            }
+
+            .sideNav {
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: $white;
+                z-index: 111111;
+                padding-left: 0;
+                padding-top: 4rem;
+
+                .item {
+                    list-style-type: none;
+                    width: 100%;
+                    text-align: center;
+                    padding: 0.8rem 0;
+                    a {
+                        font-size: 1.4rem;
+                        text-transform: uppercase;
+                    }
+                }
             }
         }
     }
 
+
+
     .header-bottom {
-        background-color: rgba($dark-grey, 0.1);
+        background-color: $white;
         position: relative;
         transition: background-color 0.5s ease;
+
         &.almost-dark {
             background-color: rgba(50,50,50, 1);
         }
@@ -49,4 +83,24 @@
             }
         }
     }
+    @include media-breakpoint-up(lg) {
+        .header-bottom {
+            background-color: rgba($dark-grey, 0.1);
+        }
+    }
+}
+
+
+
+#sm_menu_ham {
+    padding: 2px ;
+    box-shadow: none;
+
+    span {
+        background-color: $another-orange !important;
+    }
+}
+
+.sm_menu_outer {
+    height: 100vh !important;
 }

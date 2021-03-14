@@ -15,7 +15,7 @@ maxItems=3
                 <div class="text-content d-flex flex-column align-items-center">
                     <h4 class="soft-text">A digital agency that helps you go</h4>
                     <h1 class="hard-text">Beyond Your EXPECTATION</h1>
-                    <button class="btn btn-orange px-5">Request a consultation</button>
+                    <button class="btn btn-orange px-5 btn-sm">Request a consultation</button>
                 </div>
             </div>
         </div>
@@ -199,7 +199,7 @@ maxItems=3
 </section>
 
 
-<section class="testimonial-section py-4">
+<section class="testimonial-section py-4 d-none d-lg-block">
     <div class="container">
         <h3 class="testimonial__heading ">What our clients say about <strong>Captcha</strong></h3>
         <div class="row  justify-content-center py-4 gy-3">
@@ -222,6 +222,38 @@ maxItems=3
     </div>
 </section>
 
+<section class="testimonial-section mobileview py-4 d-lg-none">
+    <div class="container">
+        <h3 class="testimonial__heading ">What our clients say about <strong>Captcha</strong></h3>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        {% for testimonial in testimonialList.testimonials %}
+                        <li class="splide__slide">
+                            <div class="testimonial__card">
+                                <p class="testimonial__card__paragraph">
+                                    {{ testimonial.paragraph }}
+                                </p>
+
+                                <div class="testimonial__card__credits">
+                                    <div class="testimonial__card__credits__name">{{ testimonial.name }}</div>
+                                    <div class="testimonial__card__credits__position"><b>{{ testimonial.position }}</b></div>
+                                    <h5 class="testimonial__card__title">{{ testimonial.company }}</h5>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+<!--            <div class="col-md-4 column">-->
+
+<!--            </div>-->
+
+        </div>
+</section>
+
+
 
 <section class="blogs-section py-4">
     <div class="container">
@@ -237,10 +269,12 @@ maxItems=3
                     <div class="col-sm-8">
                         <h3 class="blog__title">Digital marketing hacks to grow your business on Instagram's new shop tab</h3>
                         <p class="blog__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur assumenda, autem commodi consequuntur cupiditate ipsa iusto necessitatibus omnis quas quia quibusdam vitae voluptatem! Adipisci deserunt harum id iure ut!</p>
-                        <button class="btn btn-orange">Read More</button>
+                        <button class="btn btn-orange btn-sm">Read More</button>
                     </div>
                 </div>
             </article>
         </div>
     </div>
 </section>
+
+
