@@ -1,0 +1,14 @@
+name: Captcha Marketing Second
+code: CMS
+description: Digital Marketing Services, Website
+author: Diwas KC
+authorUrl: 'http://diwaskhatri.com.np/'
+
+# [...]
+
+form:
+    fields:
+        site_name:
+            label: Site name
+            comment: The website name as it should appear on the front-end
+            default: Captcha
