@@ -26,14 +26,16 @@
     }
 
     &__title {
-        color: $heading-black;
+        color: #000;
+        font-weight: 500;
         font-size: 1rem;
-        font-weight: bold;
+        text-align: center;
 
     }
     &__paragraph {
         text-align: center;
-        color: $orange-300;
+        color: $another-orange;
+        font-weight: 300;
         font-size: 0.8rem;
     }
 

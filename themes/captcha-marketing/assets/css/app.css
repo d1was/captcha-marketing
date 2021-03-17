@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&family=Roboto:wght@300;400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap);
 @charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -14137,7 +14137,7 @@ a:hover, a:active, a:focus {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #FFAF85;
-  font-family: "Overpass", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -14218,16 +14218,44 @@ body {
 }
 
 .footer {
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 3rem;
   background-color: #000;
 }
 .footer__heading {
-  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+.footer__heading img {
+  width: 100px;
 }
 .footer .info, .footer .services {
   color: #e9ecef;
-  font-size: 1.2rem;
+}
+.footer .info .item__list, .footer .services .item__list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer .info .item__list.contact .company_name, .footer .services .item__list.contact .company_name {
+  color: #f78549;
+  font-size: 1rem;
+}
+.footer .info .item__list.contact .item, .footer .services .item__list.contact .item {
+  font-size: 0.7rem;
+}
+.footer .info .item__list .item, .footer .services .item__list .item {
+  padding: 0;
+}
+.footer .info .item__list .item a, .footer .services .item__list .item a {
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 300;
+}
+.footer .social-icons {
+  text-align: center;
 }
 .footer .social-icons a svg {
   width: 2rem;
@@ -14261,17 +14289,27 @@ body {
   background-color: #fff;
 }
 .header .header-top .brand-logo {
-  width: 100%;
+  width: 120px;
 }
 .header .header-top .brand-logo img {
   width: 100%;
   vertical-align: center;
 }
+.header .header-top .mobile-menu .navbar {
+  display: flex;
+  justify-content: flex-start;
+}
+.header .header-top .mobile-menu .navbar .brand-logo {
+  width: 51px;
+}
 .header .header-top .mobile-menu .text {
+  flex: 1 1 40%;
   text-align: center;
+  padding-left: 5px;
+  padding-right: 10%;
   color: #f78549;
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 13px;
   text-transform: uppercase;
 }
 .header .header-top .mobile-menu .sideNav {
@@ -14331,6 +14369,7 @@ body {
 
 .btn {
   padding: 0.4rem 2rem;
+  border-radius: 5px;
 }
 .btn.btn-primary {
   color: #E57a38;
@@ -14403,13 +14442,15 @@ body {
   background-color: #FFE6D9;
 }
 .serviceCard__title {
-  color: #414042;
+  color: #000;
+  font-weight: 500;
   font-size: 1rem;
-  font-weight: bold;
+  text-align: center;
 }
 .serviceCard__paragraph {
   text-align: center;
-  color: #feb272;
+  color: #f78549;
+  font-weight: 300;
   font-size: 0.8rem;
 }
 
@@ -14472,7 +14513,7 @@ body {
 }
 
 .hero-section {
-  height: 40rem;
+  height: 381px;
   background-image: url("/themes/captcha-marketing/assets/images/1.jpeg");
   background-size: cover;
   background-position: 50% 70%;
@@ -14499,14 +14540,19 @@ body {
   color: #E57a38;
 }
 .hero-section .container .text-content .soft-text {
-  font-size: 0.9rem;
+  font-size: 12px;
 }
 .hero-section .container .text-content .hard-text {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 22px;
   letter-spacing: 1px;
   color: #fff;
   text-align: center;
+}
+.hero-section .container .text-content button {
+  padding: 3px 15px 3px 15px;
+  font-weight: 300;
+  font-size: 10px;
 }
 @media (min-width: 768px) {
   .hero-section .container .text-content .hard-text {
@@ -14517,6 +14563,11 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .hero-section {
+    height: 640px;
+  }
+}
 .about-section {
   padding-top: 3rem;
   padding-bottom: 2rem;
@@ -14524,12 +14575,14 @@ body {
 .about-section .contentBox .about__heading {
   text-align: center;
   color: #414042;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
+  padding-bottom: 5px;
 }
 .about-section .contentBox .about__content {
-  color: #414042;
+  color: #000;
   text-align: center;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 13px;
   line-height: 1.5;
 }
 .about-section .contentBox .about__content .service {
@@ -14574,12 +14627,12 @@ body {
 
 .service-section {
   background-color: #f2f2f2;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 .service-section__title {
   color: #414042;
-  font-size: 1.8rem;
   font-weight: 300;
+  font-size: 1.3rem;
   text-align: center;
 }
 @media (min-width: 992px) {
@@ -14595,15 +14648,14 @@ body {
   text-align: center;
   font-size: 1.6rem;
   font-weight: lighter;
-  letter-spacing: 1px;
   color: #414042;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .blogs-section__heading strong {
   font-weight: bold;
 }
 .blogs-section .blog__post {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 .blogs-section .blog__post .blog__image {
   width: 100%;
@@ -14614,12 +14666,15 @@ body {
      object-fit: cover;
 }
 .blogs-section .blog__post .blog__title {
-  color: #414042;
-  font-weight: bold;
-  font-size: 1rem;
+  color: #E57A38;
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-align: center;
 }
 .blogs-section .blog__post .blog__excerpt {
+  padding-top: 5px;
   font-size: 0.8rem;
+  text-align: center;
 }
 @media (min-width: 992px) {
   .blogs-section__heading {
@@ -14680,25 +14735,31 @@ body {
 }
 
 .testimonial-section.mobileview {
-  background-color: #f78549;
+  background-color: #FD9F6D;
 }
 .testimonial-section.mobileview .testimonial__heading {
+  padding-top: 10px;
   font-size: 1.2rem;
   color: #fff;
 }
 .testimonial-section.mobileview .testimonial__card {
   background: transparent;
+  padding-top: 10px;
 }
 .testimonial-section.mobileview .testimonial__card__paragraph {
   text-align: center;
+  line-height: 1.9;
 }
 .testimonial-section.mobileview .testimonial__card__credits > * {
   text-align: center;
   color: #fff;
+  font-weight: 300;
 }
 .testimonial-section.mobileview .testimonial__card__credits .testimonial__card__title {
   text-align: center;
   color: #414042;
+  padding-top: 10px;
+  font-weight: 500;
 }
 
 .consultation-form {
@@ -14714,19 +14775,29 @@ body {
 .consultation-form .consultation__heading {
   text-align: center;
   padding-bottom: 1rem;
-  font-family: "Roboto";
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: lighter;
   color: #414042;
 }
+.consultation-form input, .consultation-form textarea {
+  border-radius: 0;
+}
 .consultation-form input::-moz-placeholder, .consultation-form textarea::-moz-placeholder {
-  color: #414042;
+  color: #707070;
+  font-size: 12px;
 }
 .consultation-form input:-ms-input-placeholder, .consultation-form textarea:-ms-input-placeholder {
-  color: #414042;
+  color: #707070;
+  font-size: 12px;
 }
 .consultation-form input::placeholder, .consultation-form textarea::placeholder {
-  color: #414042;
+  color: #707070;
+  font-size: 12px;
+}
+.consultation-form button.btn {
+  background: #fff;
+  color: #f78549;
+  padding: 3px 10px;
 }
 
 .service-content p {

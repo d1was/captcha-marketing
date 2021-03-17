@@ -1,11 +1,14 @@
+
 .hero-section {
-    height: 40rem;
+    height: 381px;
     background-image: image('1.jpeg');
     background-size: cover;
     background-position: 50% 70%;
     position: relative;
     z-index: 1;
     padding-bottom: 2.5rem;
+
+
 
     &::before {
         content: '';
@@ -29,14 +32,21 @@
             color: $brand-color;
 
             .soft-text {
-                font-size: 0.9rem;
+                font-size: 12px;
             }
             .hard-text {
                 font-weight: bold;
-                font-size: 1.5rem;
+                font-size: 22px;
                 letter-spacing: 1px;
                 color: $white;
                 text-align: center;
+            }
+
+            button {
+                padding: 3px 15px 3px 15px;
+                font-weight: 300;
+                font-size: 10px;
+
             }
 
             @include media-breakpoint-up(md) {
@@ -55,6 +65,12 @@
     }
 }
 
+@include media-breakpoint-up(md) {
+    .hero-section {
+        height: 640px;
+    }
+}
+
 
 .about-section {
     padding-top: 3rem;
@@ -63,12 +79,14 @@
         .about__heading {
             text-align: center;
             color: $heading-black;
-            font-size: 1.7rem;
+            font-size: 1.3rem;
+            padding-bottom: 5px;
         }
         .about__content {
-            color: $heading-black;
+            color: #000;
             text-align: center;
-            font-size: 1rem;
+            font-weight: 400;
+            font-size: 13px;
             line-height: 1.5;
             .service {
                 color: $another-orange;
@@ -126,12 +144,12 @@
 
 .service-section {
     background-color: #f2f2f2;
-    padding-top: 2rem;
+    padding-top: 1rem;
 
     &__title {
         color: $heading-black;
-        font-size: 1.8rem;
         font-weight: 300;
+        font-size: 1.3rem;
         text-align: center;
     }
 
@@ -146,21 +164,19 @@
 .blogs-section {
     background-color: #f2f2f2;
 
-
     &__heading {
         text-align: center;
         font-size: 1.6rem;
         font-weight: lighter;
-        letter-spacing: 1px;
         color: $heading-black;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         & strong {
             font-weight: bold;
         }
     }
 
     .blog__post {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         .blog__image {
             width: 100%;
             img {
@@ -169,12 +185,15 @@
             }
         }
         .blog__title {
-            color: $heading-black;
-            font-weight: bold;
-            font-size: 1rem;
+            color: #E57A38;
+            font-weight: 400;
+            font-size: 1.1rem;
+            text-align: center;
         }
         .blog__excerpt {
+            padding-top: 5px;
             font-size: 0.8rem;
+            text-align: center;
         }
     }
     @include media-breakpoint-up(lg) {
@@ -249,27 +268,32 @@
 }
 
 .testimonial-section.mobileview {
-    background-color: $another-orange;
+    background-color: #FD9F6D;
 
     .testimonial__heading {
+        padding-top: 10px;
         font-size: 1.2rem;
         color: $white;
     }
 
     .testimonial__card {
         background: transparent;
+        padding-top: 10px;
         &__paragraph {
             text-align: center;
+            line-height: 1.9;
         }
         &__credits {
             & > * {
                 text-align: center;
                 color: $white;
+                font-weight: 300;
             }
             .testimonial__card__title {
                 text-align: center;
                 color: $heading-black;
-
+                padding-top: 10px;
+                font-weight: 500;
             }
         }
     }
@@ -289,16 +313,24 @@
     .consultation__heading {
         text-align: center;
         padding-bottom: 1rem;
-        font-family: "Roboto";
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: lighter;
         color: $heading-black;
     }
 
     input, textarea {
+        border-radius: 0;
         &::placeholder {
-          color: $heading-black;
+          color: #707070;
+            font-size: 12px;
         }
+    }
+
+    button.btn {
+        background: #fff;
+        color: $another-orange;
+        padding: 3px 10px;
+
     }
 }
 

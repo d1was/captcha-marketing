@@ -1,6 +1,7 @@
 
 .btn {
     padding: .4rem 2rem;
+    border-radius: 5px;
     &.btn-primary {
         color: $brand-color;
         background-color: $orange-100;
@@ -53,4 +54,5 @@
             line-height: 34px;
         }
     }
+
 }

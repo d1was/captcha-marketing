@@ -1,4 +1,3 @@
-
 [menu]
 menu_id = 1
 [contactForm]
@@ -26,139 +25,17 @@ Flash::success('Your message has been sent succesfully!');
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link href="{{ url('themes/captcha-marketing/assets/css/app.css') }}" rel="stylesheet">
-    <link href="{{ url('themes/captcha-marketing/assets/css/jquery-simple-mobilemenu.css') }}" rel="stylesheet">
-    <link href="{{ url('themes/captcha-marketing/assets/css/splide.min.css') }}" rel="stylesheet">
-
+    {% partial "meta" %}
     {% placeholder head %}
 </head>
 <body>
 
     <header class="header">
-        <div class="header-top">
-            <div class="container-lg d-lg-block d-none">
-                <div class="row">
-                    <div class="col-2">
-                        <a href="{{ url('/') }}" class="brand-logo">
-                            <img src="{{ url('themes/captcha-marketing/assets/images/brand-logo.png') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="col-10 d-flex justify-content-end align-items-center">
-                        <span class="question">Want a free <span class="fw-bold">digital marketing</span> evaluation & proposal ?</span>
-                        <div>
-                            <a href="" class="btn btn-black btn-sm ml-3" text="Book Now">Book Now</a>
-                        </div>
-                        <div>
-                        <a href="" class="btn btn-orange ml-3 btn-sm number-btn">+61 - 041155023</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container mobile-menu d-lg-none">
-                <div class="row justify-content-between align-items-center py-1" >
-                    <div class="col-3">
-                        <div class="brand-logo">
-                            <img src="{{ url('themes/captcha-marketing/assets/images/brand-logo2.png') }}" alt="Captcha Marketing Brand Logo">
-                        </div>
-                    </div>
-                    <div class="text col-7">Want a free <span class="fw-bold">digital marketing</span> evaluation & <span class="fw-bold">proposal </span> ?</div>
-                    <div class="col-2 ">
-                        <ul class="mobile_menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Services</a></li>
-                            <ul class="submenu">
-                                <li><a href="">Google Ads Management</a></li>
-                                <li><a href="">Social Media Marketing</a></li>
-                                <li><a href="">Web Design</a></li>
-                            </ul>
-                            <li><a href="">Case Studies</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="">About</a></li>
 
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-bottom">
-            <div class="container d-none d-lg-block">
-                            <div class="row align-items-center">
-                                <div class="col-lg-12 ">
-                                    <nav class="navbar navbar-expand-lg navbar-light">
-                                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                                            <ul id="nav" class="navbar-nav">
-                                                {% component 'menu' %}
-                                            </ul>
-                                    </nav>
-                                    <div class="megamenu">
-                                        <div class="container">
-                                            <div class="d-flex bg-white justify-content-end">
-                                                <div class="submenu" data-menu-id="Services">
-                                                    <a href="" class="submenu-title">Services</a>
-                                                    <ul class="submenu-ul">
-                                                        <li class="submenu-li">
-                                                            <a href="">Google Ads Management</a>
-                                                        </li>
-                                                        <li class="submenu-li">
-                                                            <a href="">Social Media Marketing</a>
-                                                        </li>
-                                                        <li class="submenu-li">
-                                                            <a href="">Web Pages Design</a>
-                                                        </li>
-                                                        <li class="submenu-li">
-                                                            <a href="">Video Production</a>
-                                                        </li>
+        {% partial "header_top" %}
 
-                                                    </ul>
-                                                </div>
-                                                <div class="submenu" data-menu-id="About">
-                                                    <a href="" class="submenu-title">About</a>
-                                                    <ul class="submenu-ul">
-                                                        <li class="submenu-li">
-                                                            <a href="">Web Design Services</a>
-                                                        </li>
-                                                        <li class="submenu-li">
-                                                            <a href="">Small Business Web Design</a>
-                                                        </li>
-                                                        <li class="submenu-li">
-                                                            <a href="">E commerce Web Design</a>
-                                                        </li>
-                                                        <li class="submenu-li">
-                                                            <a href="">Enterprise Web Solutions</a>
-                                                        </li>
-                                                        <li class="submenu-li">
-                                                            <a href="">Custom Landing Pages</a>
-                                                        </li>
-                                                        <li class="submenu-li">
-                                                            <a href="">Mobile App Development</a>
-                                                        </li>
+        {% partial "header_bottom" %}
 
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-            <div class="container d-lg-none">
-                <div class="d-flex align-items-center justify-content-center py-2">
-                    <a href="" class="btn btn-black  ml-3 btn-xs" text="Book Now">Book Now</a>
-                    <a href="" class="btn btn-orange btn-sm ml-3 number-btn">+61 - 041155023</a>
-                </div>
-            </div>
-            </div>
-        </div>
-
-<!--        <div class="container">-->
-
-<!--        </div>-->
     </header>
 
 {% page %}
@@ -197,7 +74,7 @@ Flash::success('Your message has been sent succesfully!');
                             <textarea name="message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
                         </div>
                         <div class="col-12" style="text-align: center">
-                            <button      data-attach-loading class="btn btn-primary px-5">Submit</button>
+                            <button      data-attach-loading class="btn text-uppercase">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -213,18 +90,36 @@ Flash::success('Your message has been sent succesfully!');
         <div class="row justify-content-center gy-4">
             <div class="col-md-4 services">
                 <h3 class="footer__heading">Services</h3>
-                <li class="item">Google Ads</li>
-                <li class="item">Social Media Marketing</li>
-                <li class="item">Web Designing</li>
-                <li class="item">Graphics | Animation</li>
+                <ul class="item__list">
+                    <li class="item"><a href="">Google Ads</a></li>
+                    <li class="item"><a href="">Social Media Marketing</a></li>
+                    <li class="item"><a href="">Web Designing</a></li>
+                    <li class="item"><a href="">Graphics | Animation</a></li>
+                    <li class="item"><a href="">Videography</a></li>
+                    <li class="item"><a href="">Photography</a></li>
+                    <li class="item"><a href="">App Development</a></li>
+                </ul>
+                <div class="divider"></div>
             </div>
 
             <div class="col-md-4 info">
-                <h3 class="footer__heading">Contact us</h3>
-                <div class="name"><b>Captcha Marketing</b></div>
-                <div class="address">Marsfield, Sydney</div>
-                <div class="phone_number">0415505292 | 0422023558</div>
-                <div class="email">info.captchamarketing@gmail.com</div>
+                <h3 class="footer__heading">
+                    <img src="{{ url('themes/captcha-marketing/assets/images/logo/footer-logo.png') }}" alt="">
+                </h3>
+                <ul class="item__list contact">
+                    <li class="item company_name">
+                        Captcha Marketing
+                    </li>
+                    <li class="item">
+                        <span class="address">Marsfield, Sydney</span>
+                    </li>
+                    <li class="item">
+                        <span class="phone">0415505292 | 0422023558</span>
+                    </li>
+                    <li class="item">
+                        <span class="email">info.captchamarketing@gmail.com</span>
+                    </li>
+                </ul>
                 <div class="social-icons">
                     <a href="" class="facebook-icon">
                         <img src="{{ url('themes/captcha-marketing/assets/images/facebook.png') }}" alt="">
