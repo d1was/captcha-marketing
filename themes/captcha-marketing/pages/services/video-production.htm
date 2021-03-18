@@ -1,0 +1,49 @@
+url = "/service/video-production"
+layout="app"
+==
+
+{% put head %}
+<title> "Video Production" | CaptchaMarketing</title>
+{% endput %}
+
+{% partial "hero" videoUrl="assets/videos/social-media-bg.mp4" title="Video Production" %}
+
+<section class="about-google-ad">
+    <div class="container">
+        <h1 class="service__title">Video that adds value, not just views.</h1>
+        <p class="service__paragraph">
+            {% content "about-social-media-marketing.txt" %}
+        </p>
+    </div>
+</section>
+
+<section class="service-section only-title video-production">
+    <div class="container pb-3 pb-lg-0">
+        <h5 class="service-section__title pb-3">Types of Videos we can help with</h5>
+        <div class="row gy-1 gx-1 gx-lg-3 gy-lg-3 justify-content-center">
+            <div class="col-6">
+                <div class="serviceCard serviceCard--image">
+                    <h5 class="serviceCard__title">Short Commercials</h5>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">3D Videos</h5>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content ">
+                    <h5 class="serviceCard__title">Wordpress & Websites</h5>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--image">
+                    <h5 class="serviceCard__title">Landing Pages</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -14135,14 +14135,24 @@ a:hover, a:active, a:focus {
   color: #222222;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   color: #FFAF85;
   font-family: "Roboto", sans-serif;
 }
 
 @media (min-width: 768px) {
   section {
-    padding: 5rem 12rem;
+    padding: 2rem 5rem;
   }
 }
 @font-face {
@@ -14513,13 +14523,28 @@ body {
 }
 
 .hero-section {
-  height: 381px;
+  height: 70vh;
   background-image: url("/themes/captcha-marketing/assets/images/1.jpeg");
   background-size: cover;
   background-position: 50% 70%;
   position: relative;
   z-index: 1;
   padding-bottom: 2.5rem;
+}
+.hero-section .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.hero-section .hero-bg video,
+.hero-section .hero-bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero-section::before {
   content: "";
@@ -14532,6 +14557,8 @@ body {
 }
 .hero-section .container {
   height: 100%;
+  position: relative;
+  z-index: 10;
 }
 .hero-section .container .row {
   height: 100%;
@@ -14560,6 +14587,13 @@ body {
     letter-spacing: 1px;
     color: #fff;
     text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .hero-section .container .text-content button {
+    padding: 3px 15px 3px 15px;
+    font-weight: 300;
+    font-size: 15px;
   }
 }
 
@@ -14637,7 +14671,8 @@ body {
 }
 @media (min-width: 992px) {
   .service-section__title {
-    font-size: 2.8rem;
+    font-size: 1.9rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -14666,7 +14701,7 @@ body {
      object-fit: cover;
 }
 .blogs-section .blog__post .blog__title {
-  color: #E57A38;
+  color: #e57a38;
   font-weight: 400;
   font-size: 1.1rem;
   text-align: center;
@@ -14723,7 +14758,7 @@ body {
 }
 .testimonial-section .column:nth-of-type(2) .testimonial__card {
   color: #6c757d;
-  background-color: #FFE6D9;
+  background-color: #ffe6d9;
 }
 .testimonial-section .column:nth-of-type(2) .testimonial__card .testimonial__card__title {
   color: #6c757d;
@@ -14735,7 +14770,7 @@ body {
 }
 
 .testimonial-section.mobileview {
-  background-color: #FD9F6D;
+  background-color: #fd9f6d;
 }
 .testimonial-section.mobileview .testimonial__heading {
   padding-top: 10px;
@@ -14779,7 +14814,8 @@ body {
   font-weight: lighter;
   color: #414042;
 }
-.consultation-form input, .consultation-form textarea {
+.consultation-form input,
+.consultation-form textarea {
   border-radius: 0;
 }
 .consultation-form input::-moz-placeholder, .consultation-form textarea::-moz-placeholder {
@@ -14790,7 +14826,8 @@ body {
   color: #707070;
   font-size: 12px;
 }
-.consultation-form input::placeholder, .consultation-form textarea::placeholder {
+.consultation-form input::placeholder,
+.consultation-form textarea::placeholder {
   color: #707070;
   font-size: 12px;
 }
@@ -14800,8 +14837,51 @@ body {
   padding: 3px 10px;
 }
 
+.hero-section.hero-section--service .container .text-content .hard-text {
+  font-weight: 500;
+}
+
+.about-google-ad {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.google-ad-2 {
+  background: #fd9f6d;
+}
+.google-ad-2 h5, .google-ad-2 .h5 {
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 10px;
+}
+.google-ad-2 p {
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.google-ad-2 figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.service__title {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.service__paragraph {
+  color: #000;
+  text-align: center;
+  font-size: 13px;
+}
+
 .service-content p {
-  color: #adb5bd;
+  color: #000;
   line-height: 1.3;
 }
 .service-content .serviceCard--content {
@@ -14828,10 +14908,64 @@ body {
   align-items: center;
 }
 .service-content .lists > *:nth-child(odd) div {
-  background-color: #FFE6D9;
-  color: #827F7D;
+  background-color: #ffe6d9;
+  color: #827f7d;
 }
 .service-content .lists > *:nth-child(even) div {
-  background-color: #F2f2f2;
+  background-color: #f2f2f2;
   color: #E57a38;
+}
+
+@media (min-width: 992px) {
+  .service__title {
+    font-size: 28px;
+  }
+
+  .service__paragraph {
+    padding-top: 15px;
+    font-size: 14px;
+  }
+}
+.social-media-section-2 {
+  background: #f2f2f2;
+}
+.social-media-section-2 .title {
+  padding-top: 20px;
+  color: #f78549;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+}
+.social-media-section-2 .paragraph {
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .social-media-section-2 .title {
+    font-size: 28px;
+    color: #000;
+    padding-bottom: 15px;
+  }
+  .social-media-section-2 .paragraph {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+section.service-section.only-title .serviceCard {
+  padding-top: 5vw !important;
+  padding-bottom: 5vw !important;
+}
+section.service-section.only-title .serviceCard .serviceCard__title {
+  color: #707070;
+  text-transform: uppercase;
+}
+
+.service-section.video-production {
+  background-color: #fff;
+}
+.service-section.video-production .serviceCard--content {
+  background-color: #f2f2f2;
 }

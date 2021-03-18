@@ -1,0 +1,41 @@
+.social-media-section-2 {
+    background: #f2f2f2;
+
+    .title {
+        padding-top: 20px;
+        color: $another-orange;
+        font-weight: 300;
+        font-size: 20px;
+        text-align: center;
+    }
+    .paragraph {
+        color: #000;
+        font-size: 14px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .title {
+            font-size: 28px;
+            color: #000;
+            padding-bottom: 15px;
+        }
+        .paragraph {
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+}
+
+section.service-section.only-title {
+    .serviceCard {
+        padding-top: 5vw !important;
+        padding-bottom: 5vw !important;
+
+        .serviceCard__title {
+            color: #707070;
+            text-transform: uppercase;
+        }
+    }
+}

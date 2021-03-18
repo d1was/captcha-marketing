@@ -1,4 +1,4 @@
-url = "/service/:slug"
+url = "/services"
 layout="app"
 ==
 use Captchamarketing\Service\Models\Service;
@@ -16,24 +16,130 @@ function onStart() {
 <title>{{ service.title }} | CaptchaMarketing</title>
 {% endput %}
 
-<section class="hero-section hero-section--service" style="background-image: url({{ service.featured_image[0].path }})">
+{% partial "hero" bg=service.featured_image[0].path title=service.title %}
+
+<section class="about-google-ad">
     <div class="container">
-        <div class="row justify-content-center align-items-end ">
-            <div class="col-md-12">
-                <div class="text-content d-flex flex-column align-items-center">
-                    <h1 class="hard-text">{{ service.title }}</h1>
-                    <button class="btn btn-primary px-5">Request a consultation</button>
+        <h1 class="service__title">Google Ads Management</h1>
+        <p class="service__paragraph">
+            {% content "about-google-ad-management.txt" %}
+        </p>
+    </div>
+</section>
+
+
+<section class="service-section">
+    <div class="pb-4">
+        <h5 class="service-section__title pb-lg-5 pb-3">Types of Google Ads we offer</h5>
+        <div class="row gy-1 gx-1 justify-content-center">
+            <div class="col-6">
+                <div class="serviceCard serviceCard--image">
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">Google Ads</h5>
+                    <p class="serviceCard__paragraph">We scale your business with <span class="fw-bold">ads on biggest SE</span> in the world.</p>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">Social Media Management</h5>
+                    <p class="serviceCard__paragraph">We help potential customers <span class="fw-bold">discover your brand</span> on all major social platforms.</p>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--image">
+
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--image">
+
+                </div>
+            </div>
+
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">Web Design</h5>
+                    <p class="serviceCard__paragraph">We design and build websites that <span class="fw-bold">capture</span> the <b>attention.</b></p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="service-content">
+
+<section class="google-ad-2">
     <div class="container">
-        <div class="row">
-            {{ service.content | raw }}
-        </div>
+        <h5>A Google Ads Management Agency
+            that can take your business to new heights</h5>
+        <figure class="p-4">
+            <img src="{{ url('themes/captcha-marketing/assets/images/pages/google-ad-graph.png') }}" alt="">
+        </figure>
+        <p>
+            With an expert team of digital.The truth is, if you’re not investing in Google Ads, you’re missing out! It’s no secret that Google Ads is one of the fastest ways to generate leads and sales for your business.
+        </p>
     </div>
 </section>
 
+
+<section class="service-section">
+    <div class="pb-4">
+        <h5 class="service-section__title pb-lg-5 pb-3">Captcha Marketing Google Ads Management Diffrence</h5>
+        <div class="row gy-1 gx-1 justify-content-center">
+            <div class="col-6">
+                <div class="serviceCard serviceCard--image">
+                    <h5 class="serviceCard__title">Fast Results</h5>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">Sydney Based</h5>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">KPI Monitoring</h5>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--image">
+                    <h5 class="serviceCard__title">Competitors Monitoring</h5>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--image">
+                    <h5 class="serviceCard__title">Positive ROI</h5>
+                </div>
+            </div>
+
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">Content Improvement</h5>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">Measurable Increase in business growth</h5>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">Constant communications</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
