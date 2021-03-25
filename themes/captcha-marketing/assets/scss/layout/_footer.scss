@@ -43,6 +43,39 @@
         }
     }
 
+    @include media-breakpoint-up(lg) {
+        .services {
+            .footer__heading {
+                text-align: left;
+            }
+            .item__list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .item {
+                    &::before {
+                        content: "> ";
+                        padding-right: 3px;
+                    }
+                }
+            }
+        }
+
+        .info {
+            .footer__heading {
+                text-align: left;
+            }
+            .item__list {
+                display: block;
+                .item {
+                    text-align: left;
+                }
+            }
+            .social-icons {
+                text-align: left;
+            }
+        }
+    }
+
     .social-icons {
         text-align: center;
         a {

@@ -220,9 +220,11 @@
             padding-bottom: unset;
             .blog__title {
                 font-size: 1.3rem;
+                text-align: left;
             }
             .blog__excerpt {
                 font-size: 1.1rem;
+                text-align: left;
             }
         }
     }
@@ -249,18 +251,24 @@
             font-size: 1.1rem;
             font-weight: 700;
             color: $heading-black;
+            text-align: center;
         }
 
         &__paragraph {
             padding-top: 1rem;
             font-size: 0.9rem;
             color: $heading-black;
+            text-align: center;
+
         }
 
         &__credits {
-            &--name {
+            &__name {
+                text-align: center;
+
             }
-            &--position {
+            &__position {
+                text-align: center;
                 font-weight: bold;
             }
         }

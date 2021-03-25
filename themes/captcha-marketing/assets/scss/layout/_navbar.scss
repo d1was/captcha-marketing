@@ -11,6 +11,7 @@
             font-family: $headings-font-family;
              > a {
                 padding: 20px;
+                 font-size: 12px;
                  text-decoration: none;
                 color: $nav-color;
                 &.active{

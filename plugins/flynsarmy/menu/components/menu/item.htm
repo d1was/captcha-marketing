@@ -1,27 +1,4 @@
-{% if child_count %}
-<li class="nav-item dropdown" data-menu-id="{{ item.label }}">
-    {% if url %}
-    {% if child_count or always_show_before_after_children %}
-    <a href="#" class="page-scroll dd-menu dropdown-toggle" id="navbarDropdownMenuLink" data-bs-toggle="dropdown">{{ item.label}}</a>
-    <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-        {% for child in item.getChildren() %}
-        <li>
-            <a href="{{ child.url }}" class="page-scroll  dropdown-item">{{ child.label }}</a>
-        </li>
 
-        {% endfor %}
-    </ul>
-    {% else %}
-    <a href="" class="page-scroll active dd-menu ">{{ item.label }}</a>
-    {% endif %}
-    {% endif %}
-
-</li>
-
-{% else %}
 <li class="nav-item dropdown" data-menu-id="{{ item.label }}">
     <a href="{{ item.url }}" class="page-scroll active dd-menu ">{{ item.label }}</a>
 </li>
-
-{% endif %}
-

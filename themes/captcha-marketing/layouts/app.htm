@@ -90,12 +90,12 @@ Flash::success('Your message has been sent succesfully!');
         <div class="row justify-content-center gy-4">
             <div class="col-md-4 services">
                 <h3 class="footer__heading">Services</h3>
-                <ul class="item__list">
-                    <li class="item"><a href="">Google Ads</a></li>
-                    <li class="item"><a href="">Social Media Marketing</a></li>
-                    <li class="item"><a href="">Web Designing</a></li>
+                <ul class="item__list ">
+                    <li class="item"><a href="/service/google-ad-management">Google Ads</a></li>
+                    <li class="item"><a href="/service/social-media-marketing">Social Media Marketing</a></li>
+                    <li class="item"><a href="/service/web-design">Web Designing</a></li>
                     <li class="item"><a href="">Graphics | Animation</a></li>
-                    <li class="item"><a href="">Videography</a></li>
+                    <li class="item"><a href="/service/video-production">Videography</a></li>
                     <li class="item"><a href="">Photography</a></li>
                     <li class="item"><a href="">App Development</a></li>
                 </ul>
@@ -103,8 +103,11 @@ Flash::success('Your message has been sent succesfully!');
             </div>
 
             <div class="col-md-4 info">
-                <h3 class="footer__heading">
+                <div class="img d-block d-md-none text-center">
                     <img src="{{ url('themes/captcha-marketing/assets/images/logo/footer-logo.png') }}" alt="">
+                </div>
+                <h3 class="footer__heading d-none d-md-block">
+                    Contact
                 </h3>
                 <ul class="item__list contact">
                     <li class="item company_name">

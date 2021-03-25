@@ -1,0 +1,29 @@
+url = "/blogs"
+layout="app"
+==
+use Captchamarketing\Service\Models\Service;
+
+function onStart() {
+$serviceSlug = $this->param('slug');
+$this['service'] = Service::whereSlug($serviceSlug)->first();
+}
+
+==
+{% put head %}
+<title>"Blogs" | CaptchaMarketing</title>
+{% endput %}
+
+{% partial "hero" videoUrl="assets/videos/social-media-bg.mp4" title="Blog Posts" %}
+
+
+<section class="blog-lists py-4">
+    <div class="container">
+        <div class="row g-4">
+            {% for i in 0..7 %}
+            <article class="col-12  col-md-6 col-lg-4 col-xl-3">
+                {% partial "blog/blog-item" %}
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

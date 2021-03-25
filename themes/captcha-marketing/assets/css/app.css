@@ -14217,6 +14217,7 @@ body {
 }
 .navbar .navbar-nav .nav-item > a {
   padding: 20px;
+  font-size: 12px;
   text-decoration: none;
   color: #F0661D;
 }
@@ -14263,6 +14264,31 @@ body {
   font-size: 0.8rem;
   color: #fff;
   font-weight: 300;
+}
+@media (min-width: 992px) {
+  .footer .services .footer__heading {
+    text-align: left;
+  }
+  .footer .services .item__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer .services .item__list .item::before {
+    content: "> ";
+    padding-right: 3px;
+  }
+  .footer .info .footer__heading {
+    text-align: left;
+  }
+  .footer .info .item__list {
+    display: block;
+  }
+  .footer .info .item__list .item {
+    text-align: left;
+  }
+  .footer .info .social-icons {
+    text-align: left;
+  }
 }
 .footer .social-icons {
   text-align: center;
@@ -14721,9 +14747,11 @@ body {
   }
   .blogs-section .blog__post .blog__title {
     font-size: 1.3rem;
+    text-align: left;
   }
   .blogs-section .blog__post .blog__excerpt {
     font-size: 1.1rem;
+    text-align: left;
   }
 }
 
@@ -14747,13 +14775,19 @@ body {
   font-size: 1.1rem;
   font-weight: 700;
   color: #414042;
+  text-align: center;
 }
 .testimonial-section .testimonial__card__paragraph {
   padding-top: 1rem;
   font-size: 0.9rem;
   color: #414042;
+  text-align: center;
 }
-.testimonial-section .testimonial__card__credits--position {
+.testimonial-section .testimonial__card__credits__name {
+  text-align: center;
+}
+.testimonial-section .testimonial__card__credits__position {
+  text-align: center;
   font-weight: bold;
 }
 .testimonial-section .column:nth-of-type(2) .testimonial__card {
@@ -14968,4 +15002,41 @@ section.service-section.only-title .serviceCard .serviceCard__title {
 }
 .service-section.video-production .serviceCard--content {
   background-color: #f2f2f2;
+}
+
+.blog-lists {
+  background: #e9ecef;
+}
+.blog-lists .blog-item {
+  background: #fff;
+  position: relative;
+  border-radius: 0 0 20px 20px;
+}
+.blog-lists .blog-item .blog-image {
+  position: relative;
+  padding-bottom: 250px;
+}
+.blog-lists .blog-item .blog-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog-lists .blog-item .content {
+  padding: 20px;
+}
+.blog-lists .blog-item .content .blog__title {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #000;
+}
+.blog-lists .blog-item .content .blog__excerpt {
+  text-align: justify;
+  font-size: 0.8rem;
+}
+.blog-lists .blog-item .actions {
+  text-align: center;
 }

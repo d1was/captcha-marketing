@@ -1,0 +1,63 @@
+url = "/service/google-my-business"
+layout="app"
+==
+
+{% put head %}
+<title>"Google My Business" | CaptchaMarketing</title>
+{% endput %}
+
+{% partial "hero" videoUrl="assets/videos/social-media-bg.mp4" title="Google My Business" %}
+
+<section class="about-google-ad">
+    <div class="container">
+        <h1 class="service__title">Optimised Local SEO through GMB</h1>
+        <p class="service__paragraph">
+            {% content "about-google-my-page.txt" %}
+        </p>
+    </div>
+</section>
+
+
+
+
+
+<section class="service-section only-title">
+    <div class="container">
+        <h5 class="service-section__title pb-lg-5 pb-3">Type of Service we can help with GMB</h5>
+        <div class="row gy-1 gx-1 gy-lg-3 gx-lg-3 justify-content-center">
+            <div class="col-6">
+                <div class="serviceCard serviceCard--image">
+                    <h5 class="serviceCard__title">GMB Setup</h5>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">LOCAL SEO</h5>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--content">
+                    <h5 class="serviceCard__title">WORDPRESS SITES</h5>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="serviceCard serviceCard--image">
+                    <h5 class="serviceCard__title">LANDING PAGES</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="about-google-ad">
+    <div class="container">
+        <h1 class="service__title"> Why GMB for your business ? </h1>
+        <p class="service__paragraph">
+            {% content "about-google-my-page.txt" %}
+        </p>
+    </div>
+</section>
