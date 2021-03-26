@@ -14608,6 +14608,9 @@ body {
   font-size: 10px;
 }
 @media (min-width: 768px) {
+  .hero-section .container .text-content .soft-text {
+    font-size: 16px;
+  }
   .hero-section .container .text-content .hard-text {
     font-size: 3rem;
     letter-spacing: 1px;
@@ -14656,33 +14659,6 @@ body {
   .about-section .contentBox .about__content {
     font-size: 1.6rem;
   }
-}
-
-.service2-section .section-subtitle {
-  color: #E57a38;
-  font-weight: bold;
-}
-.service2-section .section-title {
-  font-size: 2rem;
-  padding-bottom: 2.6rem;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-}
-.service2-section .service-list > * {
-  padding-bottom: 2rem;
-}
-.service2-section .service-icon svg {
-  fill: #E57a38;
-  width: 2rem;
-}
-.service2-section .service-title {
-  color: #495057;
-  font-weight: bold;
-}
-.service2-section .service-content {
-  color: #6c757d;
-  font-size: 0.8rem;
-  line-height: 1.8;
 }
 
 .service-section {
@@ -14746,6 +14722,8 @@ body {
     padding-bottom: unset;
   }
   .blogs-section .blog__post .blog__title {
+    color: #000;
+    font-weight: 500;
     font-size: 1.3rem;
     text-align: left;
   }

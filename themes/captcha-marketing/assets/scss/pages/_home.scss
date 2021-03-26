@@ -64,6 +64,7 @@
 
             @include media-breakpoint-up(md) {
                 .soft-text {
+                    font-size: 16px;
                 }
                 .hard-text {
                     font-size: 3rem;
@@ -122,40 +123,6 @@
     }
 }
 
-.service2-section {
-    .section-subtitle {
-        color: $brand-color;
-        font-weight: bold;
-    }
-
-    .section-title {
-        font-size: 2rem;
-        padding-bottom: 2.6rem;
-        font-weight: bold;
-        letter-spacing: 0.1rem;
-    }
-
-    .service-list > * {
-        padding-bottom: 2rem;
-    }
-
-    .service-icon {
-        svg {
-            fill: $brand-color;
-            width: 2rem;
-        }
-    }
-
-    .service-title {
-        color: $gray-700;
-        font-weight: bold;
-    }
-    .service-content {
-        color: $gray-600;
-        font-size: 0.8rem;
-        line-height: 1.8;
-    }
-}
 
 .service-section {
     background-color: #f2f2f2;
@@ -219,6 +186,8 @@
         .blog__post {
             padding-bottom: unset;
             .blog__title {
+                color: #000;
+                font-weight: 500;
                 font-size: 1.3rem;
                 text-align: left;
             }
